@@ -17,7 +17,7 @@ BAD_MSRMT_ACCURACY = 10
 # Case 1
 # Generate measurements results for good accuracy and good repeatability case
 #
-# generating normal distribution or random numbers
+# generating normal distribution of random numbers
 rand_factor1 = 1 + 0.005 * np.random.randn(MSRMT_QTY, 2)
 # generating initial measurement with good accuracy
 measurement_init1 = np.array([TRUE_QTY_VALUE[0] * rand_factor1[0, 0],
@@ -33,7 +33,7 @@ measurement1 = np.concatenate((np.reshape(measurement_init1, (2, 1)), measuremen
 # Case 2
 # Generate measurements results for good accuracy and poor repeatability case
 #
-# generating normal distribution or random numbers
+# generating normal distribution of random numbers
 rand_factor2 = 1 + 0.015 * np.random.randn(MSRMT_QTY, 2)
 # taking the initial measurement with good accuracy from the previous case
 measurement_init2 = measurement_init1
@@ -48,7 +48,7 @@ measurement2 = np.concatenate((np.reshape(measurement_init2, (2, 1)), measuremen
 # Case 3
 # Generate measurements results for poor accuracy and good repeatability case
 #
-# generating normal distribution or random numbers
+# generating normal distribution of random numbers
 rand_factor3 = 1 + 0.005 * np.random.randn(MSRMT_QTY, 2)
 # generating random angle from 0 to 2*Pi
 angle = 2 * math.pi * np.random.uniform()
